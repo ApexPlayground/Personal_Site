@@ -1,11 +1,15 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <!-- Outer wrapper with margin around the whole page -->
+  <div class="min-h-screen bg-white dark:bg-[#111111] text-black dark:text-white p-4">
+    <div class="max-w-full sm:max-w-2xl mx-auto">
+      <HeaderComponent />
+      <main class="mt-6">
+        <ContentComponent />
+      </main>
+    </div>
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import HeaderComponent from './components/HeaderComponent.vue'
+</script>

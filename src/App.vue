@@ -9,10 +9,12 @@
     </div>
 
     <FloatingNav />
+    <MouseFollower />
   </div>
 </template>
 
 <script setup>
 import FloatingNav from './components/FloatingNav.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
+import MouseFollower from './components/MouseFollower.vue'
 </script>

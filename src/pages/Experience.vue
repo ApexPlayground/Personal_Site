@@ -43,7 +43,7 @@ const education = [
   {
     title: 'BSc in Computer Science',
     institution: 'Griffith College Dublin',
-    period: '2019 – 2023',
+    period: '2020 – 2024',
     points: [
       'Graduated with First-Class Honours (1:1).',
       'Built strong foundations in software engineering, data structures, and network security.',
@@ -55,17 +55,15 @@ const education = [
 </script>
 
 <template>
-  <section
-    class="max-w-3xl mx-auto mt-12 border-t border-gray-200 dark:border-gray-800 pt-8 space-y-12"
-  >
-    <!-- WORK EXPERIENCE -->
+  <section class="max-w-3xl mx-auto mt-12 space-y-10">
+    <!-- experience -->
     <FadeUpSection>
-      <h2 class="text-sm uppercase tracking-wide opacity-70 mb-6">Work Experience</h2>
+      <h2 class="text-sm uppercase tracking-wide mb-6">Work Experience</h2>
 
       <div class="space-y-10">
         <div v-for="(job, i) in workExperience" :key="i" class="flex items-start gap-4">
           <div
-            class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300"
+            class="w-12 h-12 rounded-xl p-5 bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300"
           >
             <i :class="[job.icon, 'text-lg']"></i>
           </div>
@@ -86,10 +84,10 @@ const education = [
       </div>
     </FadeUpSection>
 
-    <!-- EDUCATION -->
+    <!-- education -->
     <FadeUpSection :delay="0.2">
       <div class="border-t border-gray-200 dark:border-gray-800 pt-8">
-        <h2 class="text-sm uppercase tracking-wide opacity-70 mb-6">Education</h2>
+        <h2 class="text-sm uppercase tracking-wide mb-6">Education</h2>
 
         <div class="space-y-10">
           <div v-for="(edu, i) in education" :key="i" class="flex items-start gap-4">

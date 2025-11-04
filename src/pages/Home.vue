@@ -101,7 +101,7 @@ if (hour >= 4 && hour < 12) {
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Frameworks & Backend</h3>
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                Chi, Vue.js, Spring Boot, FastAPI
+                Go-Chi, Vue.js, Spring Boot, FastAPI
               </p>
             </div>
           </div>

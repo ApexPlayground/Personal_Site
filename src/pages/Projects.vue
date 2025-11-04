@@ -45,7 +45,7 @@ const projects = [
   <section class="max-w-3xl mx-auto mt-12 space-y-10">
     <h2 class="text-sm uppercase tracking-wide mb-6">Projects</h2>
 
-    <div class="space-y-8">
+    <div class="space-y-16">
       <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.15">
         <div class="flex items-start gap-4">
           <!-- Icon -->

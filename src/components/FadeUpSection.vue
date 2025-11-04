@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// allow delay customization per section
+// allow delay customization prop
 const props = defineProps({
   delay: {
     type: Number,

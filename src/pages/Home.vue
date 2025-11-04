@@ -73,7 +73,7 @@ if (hour >= 4 && hour < 12) {
     <!-- skills -->
     <FadeUpSection :delay="0.2">
       <section class="mt-16 border-t border-gray-200 dark:border-gray-800 pt-8">
-        <h2 class="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-6">
+        <h2 class="text-sm uppercase tracking-wide text-gray-800 dark:text-gray-400 mb-6">
           Skills & Tools
         </h2>
 
@@ -81,26 +81,26 @@ if (hour >= 4 && hour < 12) {
           <!-- Skills 1 -->
           <div class="flex items-start gap-4">
             <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-600 dark:text-gray-300"
+              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300"
             >
               <i class="pi pi-code text-xl"></i>
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Languages</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Python, Go, Java, JavaScript</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">Python, Go, Java, JavaScript</p>
             </div>
           </div>
 
           <!-- Skill 2 -->
           <div class="flex items-start gap-4">
             <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-600 dark:text-gray-300"
+              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300"
             >
               <i class="pi pi-server text-xl"></i>
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Frameworks & Backend</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
+              <p class="text-sm text-gray-800 dark:text-gray-400">
                 Go-Chi, Vue.js, Spring Boot, FastAPI
               </p>
             </div>
@@ -109,13 +109,13 @@ if (hour >= 4 && hour < 12) {
           <!-- Skill  3 -->
           <div class="flex items-start gap-4">
             <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-600 dark:text-gray-300"
+              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300"
             >
               <i class="pi pi-cloud text-xl"></i>
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Cloud</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
+              <p class="text-sm text-gray-800 dark:text-gray-400">
                 Google Cloud, AWS, Docker, Linux
               </p>
             </div>
@@ -124,33 +124,33 @@ if (hour >= 4 && hour < 12) {
           <!-- Skill  4 -->
           <div class="flex items-start gap-4">
             <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-600 dark:text-gray-300"
+              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300"
             >
               <i class="pi pi-database text-xl"></i>
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Databases</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">PostgreSQL, MySQL</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">PostgreSQL, MySQL</p>
             </div>
           </div>
 
           <!-- Skill  5 -->
           <div class="flex items-start gap-4">
             <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-600 dark:text-gray-300"
+              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300"
             >
               <i class="pi pi-cog text-xl"></i>
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Tools</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Git, Bash, Postman</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">Git, Bash, Postman</p>
             </div>
           </div>
         </div>
 
         <!-- Footer line -->
         <div
-          class="flex justify-between items-center mt-10 border-t border-gray-200 dark:border-gray-800 pt-4 text-sm text-gray-500 dark:text-gray-400"
+          class="flex justify-between items-center mt-10 border-t border-gray-200 dark:border-gray-800 pt-4 text-sm text-gray-800 dark:text-gray-400"
         >
           <span>© {{ currentYear }} Divine Eboigbe</span>
           <span>{{ greeting }}</span>

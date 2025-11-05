@@ -42,8 +42,8 @@ const projects = [
 </script>
 
 <template>
-  <section class="max-w-3xl mx-auto mt-12 px-4 sm:px-0 space-y-10">
-    <h2 class="text-sm uppercase tracking-wide mb-6 text-center sm:text-left">Projects</h2>
+  <section class="max-w-3xl mx-auto mt-12 sm:px-0 space-y-10">
+    <h2 class="uppercase tracking-wide mb-6 text-center sm:text-left">Projects</h2>
 
     <div class="space-y-12 sm:space-y-16">
       <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.15">
@@ -68,16 +68,16 @@ const projects = [
               class="font-semibold transition-opacity duration-300 hover:opacity-80"
             >
               {{ project.title }}
-              <i class="pi pi-external-link text-xs ml-1 opacity-60"></i>
+              <i class="pi pi-external-link ml-1 opacity-60"></i>
             </a>
 
             <!-- Subtitle -->
-            <p class="text-sm italic opacity-80 mb-3 leading-relaxed mt-1">
+            <p class="italic opacity-80 mb-3 leading-relaxed mt-1">
               {{ project.subtitle }}
             </p>
 
             <!-- Bullet points -->
-            <ul class="list-disc pl-5 space-y-1 text-sm opacity-90 text-left">
+            <ul class="list-disc pl-5 space-y-1 opacity-90 text-left">
               <li v-for="(point, p) in project.points" :key="p">
                 {{ point }}
               </li>

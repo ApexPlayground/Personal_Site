@@ -55,10 +55,10 @@ const education = [
 </script>
 
 <template>
-  <section class="max-w-3xl mx-auto mt-12 px-4 sm:px-0 space-y-10">
+  <section class="max-w-3xl mx-auto mt-12 sm:px-0 space-y-10">
     <!-- Work Experience -->
     <FadeUpSection>
-      <h2 class="text-sm uppercase tracking-wide mb-6 text-center sm:text-left">Work Experience</h2>
+      <h2 class="uppercase tracking-wide mb-6 text-center sm:text-left">Work Experience</h2>
 
       <div class="space-y-8 sm:space-y-10">
         <div
@@ -78,9 +78,9 @@ const education = [
             <h3 class="font-semibold hover:opacity-80 transition-opacity duration-300">
               {{ job.title }}
             </h3>
-            <p class="text-sm italic opacity-80 mb-2">{{ job.company }} • {{ job.period }}</p>
+            <p class="italic opacity-80 mb-2">{{ job.company }} • {{ job.period }}</p>
 
-            <ul class="list-disc pl-5 space-y-1 text-sm opacity-90 text-left">
+            <ul class="list-disc pl-5 space-y-1 opacity-90 text-left">
               <li v-for="(point, p) in job.points" :key="p">{{ point }}</li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ const education = [
     <!-- Education -->
     <FadeUpSection :delay="0.2">
       <div class="border-t border-gray-200 dark:border-gray-800 pt-8">
-        <h2 class="text-sm uppercase tracking-wide mb-6 text-center sm:text-left">Education</h2>
+        <h2 class="uppercase tracking-wide mb-6 text-center sm:text-left">Education</h2>
 
         <div class="space-y-8 sm:space-y-10">
           <div
@@ -111,9 +111,9 @@ const education = [
               <h3 class="font-semibold hover:opacity-80 transition-opacity duration-300">
                 {{ edu.title }}
               </h3>
-              <p class="text-sm italic opacity-80 mb-2">{{ edu.institution }} • {{ edu.period }}</p>
+              <p class="italic opacity-80 mb-2">{{ edu.institution }} • {{ edu.period }}</p>
 
-              <ul class="list-disc pl-5 space-y-1 text-sm opacity-90 text-left">
+              <ul class="list-disc pl-5 space-y-1 opacity-90 text-left">
                 <li v-for="(point, p) in edu.points" :key="p">{{ point }}</li>
               </ul>
             </div>

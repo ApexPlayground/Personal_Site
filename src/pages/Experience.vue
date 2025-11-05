@@ -64,7 +64,7 @@ const education = [
         <div
           v-for="(job, i) in workExperience"
           :key="i"
-          class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5"
+          class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6"
         >
           <!-- Icon -->
           <div
@@ -78,14 +78,10 @@ const education = [
             <h3 class="font-semibold hover:opacity-80 transition-opacity duration-300">
               {{ job.title }}
             </h3>
-            <p class="text-xs sm:text-sm italic opacity-80 mb-2">
-              {{ job.company }} • {{ job.period }}
-            </p>
+            <p class="text-sm italic opacity-80 mb-2">{{ job.company }} • {{ job.period }}</p>
 
-            <ul class="list-disc pl-4 sm:pl-5 space-y-1 text-xs sm:text-sm opacity-90 text-left">
-              <li v-for="(point, p) in job.points" :key="p">
-                {{ point }}
-              </li>
+            <ul class="list-disc pl-5 space-y-1 text-sm opacity-90 text-left">
+              <li v-for="(point, p) in job.points" :key="p">{{ point }}</li>
             </ul>
           </div>
         </div>
@@ -101,7 +97,7 @@ const education = [
           <div
             v-for="(edu, i) in education"
             :key="i"
-            class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5"
+            class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6"
           >
             <!-- Icon -->
             <div
@@ -115,14 +111,10 @@ const education = [
               <h3 class="font-semibold hover:opacity-80 transition-opacity duration-300">
                 {{ edu.title }}
               </h3>
-              <p class="text-xs sm:text-sm italic opacity-80 mb-2">
-                {{ edu.institution }} • {{ edu.period }}
-              </p>
+              <p class="text-sm italic opacity-80 mb-2">{{ edu.institution }} • {{ edu.period }}</p>
 
-              <ul class="list-disc pl-4 sm:pl-5 space-y-1 text-xs sm:text-sm opacity-90 text-left">
-                <li v-for="(point, p) in edu.points" :key="p">
-                  {{ point }}
-                </li>
+              <ul class="list-disc pl-5 space-y-1 text-sm opacity-90 text-left">
+                <li v-for="(point, p) in edu.points" :key="p">{{ point }}</li>
               </ul>
             </div>
           </div>

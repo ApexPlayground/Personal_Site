@@ -47,7 +47,7 @@ const projects = [
 
     <div class="space-y-12 sm:space-y-16">
       <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.15">
-        <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-sm sm:text-base">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
           <!-- Icon -->
           <a
             :href="project.link"
@@ -58,6 +58,7 @@ const projects = [
             <i :class="[project.icon, 'text-lg sm:text-xl']"></i>
           </a>
 
+          <!-- Content -->
           <div class="text-center sm:text-left">
             <!-- Title -->
             <a
@@ -76,7 +77,7 @@ const projects = [
             </p>
 
             <!-- Bullet points -->
-            <ul class="list-disc pl-5 sm:pl-5 space-y-1 text-sm opacity-90 text-left">
+            <ul class="list-disc pl-5 space-y-1 text-sm opacity-90 text-left">
               <li v-for="(point, p) in project.points" :key="p">
                 {{ point }}
               </li>

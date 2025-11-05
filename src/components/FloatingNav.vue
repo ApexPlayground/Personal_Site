@@ -1,7 +1,7 @@
 <template>
   <div class="fixed bottom-8 left-1/2 -translate-x-1/2">
     <nav
-      class="flex items-center justify-around w-50 px-2 rounded-full shadow-md border backdrop-blur-md bg-gray-100/90 dark:bg-[#1a1a1a]/90 text-black dark:text-white border-gray-100 dark:border-[#2a2a2a] transition-colors duration-300"
+      class="flex items-center justify-around w-50 px-2 rounded-full shadow-md border backdrop-blur-md bg-gray-100/70 dark:bg-[#1a1a1a]/70 text-black dark:text-white border-gray-100 dark:border-[#2a2a2a] transition-colors duration-300"
     >
       <component
         v-for="(item, i) in links"

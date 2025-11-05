@@ -55,58 +55,74 @@ const education = [
 </script>
 
 <template>
-  <section class="max-w-3xl mx-auto mt-12 space-y-10">
-    <!-- experience -->
+  <section class="max-w-3xl mx-auto mt-12 px-4 sm:px-0 space-y-10">
+    <!-- Work Experience -->
     <FadeUpSection>
-      <h2 class="text-sm uppercase tracking-wide mb-6">Work Experience</h2>
+      <h2 class="text-sm uppercase tracking-wide mb-6 text-center sm:text-left">Work Experience</h2>
 
-      <div class="space-y-10">
-        <div v-for="(job, i) in workExperience" :key="i" class="flex items-start gap-4">
+      <div class="space-y-8 sm:space-y-10">
+        <div
+          v-for="(job, i) in workExperience"
+          :key="i"
+          class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5"
+        >
+          <!-- Icon -->
           <div
-            class="w-12 h-12 rounded-xl p-5 bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl p-4 sm:p-5 bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300 mx-auto sm:mx-0"
           >
-            <i :class="[job.icon, 'text-lg']"></i>
+            <i :class="[job.icon, 'text-lg sm:text-xl']"></i>
           </div>
 
-          <div>
-            <h3
-              class="font-semibold hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-300"
-            >
+          <!-- Content -->
+          <div class="text-center sm:text-left">
+            <h3 class="font-semibold hover:opacity-80 transition-opacity duration-300">
               {{ job.title }}
             </h3>
-            <p class="text-sm italic opacity-80 mb-2">{{ job.company }} • {{ job.period }}</p>
+            <p class="text-xs sm:text-sm italic opacity-80 mb-2">
+              {{ job.company }} • {{ job.period }}
+            </p>
 
-            <ul class="list-disc pl-5 space-y-1 text-sm opacity-90">
-              <li v-for="(point, p) in job.points" :key="p">{{ point }}</li>
+            <ul class="list-disc pl-4 sm:pl-5 space-y-1 text-xs sm:text-sm opacity-90 text-left">
+              <li v-for="(point, p) in job.points" :key="p">
+                {{ point }}
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </FadeUpSection>
 
-    <!-- education -->
+    <!-- Education -->
     <FadeUpSection :delay="0.2">
       <div class="border-t border-gray-200 dark:border-gray-800 pt-8">
-        <h2 class="text-sm uppercase tracking-wide mb-6">Education</h2>
+        <h2 class="text-sm uppercase tracking-wide mb-6 text-center sm:text-left">Education</h2>
 
-        <div class="space-y-10">
-          <div v-for="(edu, i) in education" :key="i" class="flex items-start gap-4">
+        <div class="space-y-8 sm:space-y-10">
+          <div
+            v-for="(edu, i) in education"
+            :key="i"
+            class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5"
+          >
+            <!-- Icon -->
             <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300"
+              class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl p-4 sm:p-5 bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300 mx-auto sm:mx-0"
             >
-              <i :class="[edu.icon, 'text-lg']"></i>
+              <i :class="[edu.icon, 'text-lg sm:text-xl']"></i>
             </div>
 
-            <div>
-              <h3
-                class="font-semibold hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-300"
-              >
+            <!-- Content -->
+            <div class="text-center sm:text-left">
+              <h3 class="font-semibold hover:opacity-80 transition-opacity duration-300">
                 {{ edu.title }}
               </h3>
-              <p class="text-sm italic opacity-80 mb-2">{{ edu.institution }} • {{ edu.period }}</p>
+              <p class="text-xs sm:text-sm italic opacity-80 mb-2">
+                {{ edu.institution }} • {{ edu.period }}
+              </p>
 
-              <ul class="list-disc pl-5 space-y-1 text-sm opacity-90">
-                <li v-for="(point, p) in edu.points" :key="p">{{ point }}</li>
+              <ul class="list-disc pl-4 sm:pl-5 space-y-1 text-xs sm:text-sm opacity-90 text-left">
+                <li v-for="(point, p) in edu.points" :key="p">
+                  {{ point }}
+                </li>
               </ul>
             </div>
           </div>

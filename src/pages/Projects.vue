@@ -42,23 +42,23 @@ const projects = [
 </script>
 
 <template>
-  <section class="max-w-3xl mx-auto mt-12 space-y-10">
-    <h2 class="text-sm uppercase tracking-wide mb-6">Projects</h2>
+  <section class="max-w-3xl mx-auto mt-12 px-4 sm:px-0 space-y-10">
+    <h2 class="text-sm uppercase tracking-wide mb-6 text-center sm:text-left">Projects</h2>
 
-    <div class="space-y-16">
+    <div class="space-y-12 sm:space-y-16">
       <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.15">
-        <div class="flex items-start gap-4">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-sm sm:text-base">
           <!-- Icon -->
           <a
             :href="project.link"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300 mx-auto sm:mx-0"
           >
-            <i :class="[project.icon, 'text-xl']"></i>
+            <i :class="[project.icon, 'text-lg sm:text-xl']"></i>
           </a>
 
-          <div>
+          <div class="text-center sm:text-left">
             <!-- Title -->
             <a
               :href="project.link"
@@ -71,15 +71,19 @@ const projects = [
             </a>
 
             <!-- Subtitle -->
-            <p class="text-sm italic opacity-80 mb-3">{{ project.subtitle }}</p>
+            <p class="text-sm italic opacity-80 mb-3 leading-relaxed mt-1">
+              {{ project.subtitle }}
+            </p>
 
             <!-- Bullet points -->
-            <ul class="list-disc pl-5 space-y-1 text-sm opacity-90">
-              <li v-for="(point, p) in project.points" :key="p">{{ point }}</li>
+            <ul class="list-disc pl-5 sm:pl-5 space-y-1 text-sm opacity-90 text-left">
+              <li v-for="(point, p) in project.points" :key="p">
+                {{ point }}
+              </li>
             </ul>
 
             <!-- Tech tags -->
-            <div class="flex flex-wrap gap-2 mt-3">
+            <div class="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
               <span
                 v-for="(tech, t) in project.tech"
                 :key="t"

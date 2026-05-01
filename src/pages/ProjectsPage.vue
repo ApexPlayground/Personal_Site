@@ -9,7 +9,7 @@ const projects = [
       'Built a complete link-shortening product from scratch. Users can create short links, generate QR codes, and view real-time analytics showing who clicked, from where, and on what device. Designed to handle high traffic using Redis caching and a background worker pipeline, with secure user accounts and collision-safe link generation.',
     tech: ['Go', 'Gin', 'PostgreSQL', 'Redis', 'Vue.js'],
     icon: 'pi pi-link',
-    github: 'https://github.com/ApexPlayground/url-shortener',
+    github: 'https://github.com/ApexPlayground/Linkkit',
     live: null,
   },
   {

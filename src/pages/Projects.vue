@@ -3,99 +3,135 @@ import FadeUpSection from '../components/FadeUpSection.vue'
 
 const projects = [
   {
-    title: 'S3Scan',
-    subtitle: 'Python CLI Tool for AWS S3 Security Auditing',
-    points: [
-      'Developed a command-line tool to audit AWS S3 buckets for security misconfigurations.',
-      'Implemented checks for ACLs, CORS, bucket policies, and versioning, with a full audit mode.',
-      'Built with Python, Click, and Boto3, supporting both AWS and LocalStack for local testing.',
-    ],
-    tech: ['Python', 'Boto3', 'Click', 'LocalStack'],
-    icon: 'pi pi-cloud',
-    link: 'https://github.com/ApexPlayground/s3_Scan',
+    title: 'URL Shortener & QR Analytics',
+    subtitle: 'Full-stack link management platform',
+    description:
+      'Built a complete link-shortening product from scratch. Users can create short links, generate QR codes, and view real-time analytics showing who clicked, from where, and on what device. Designed to handle high traffic using Redis caching and a background worker pipeline, with secure user accounts and collision-safe link generation.',
+    tech: ['Go', 'Gin', 'PostgreSQL', 'Redis', 'Vue.js'],
+    icon: 'pi pi-link',
+    github: 'https://github.com/ApexPlayground/url-shortener',
+    live: null,
   },
   {
-    title: 'T-Pot Honeypot Deployment & Analysis',
-    subtitle: 'Google Cloud Honeypot Environment for Real-World Attack Analysis',
-    points: [
-      'Deployed a multi-service honeypot environment (T-Pot) on Google Cloud to capture real-world attack data from hackers.',
-      'Automated secure log collection using rsync and analyzed SSH/HTTP attack trends with Python.',
-      'Managed cloud firewall rules, user access, and secure log storage on local and cloud systems.',
-    ],
-    tech: ['Google Cloud', 'Python', 'T-Pot', 'rsync', 'Firewall'],
+    title: 'T-Pot Honeypot Deployment',
+    subtitle: 'Google Cloud honeypot for real-world attack analysis',
+    description:
+      'Deployed a multi-service honeypot on Google Cloud across two regions (Europe and Asia) to capture live attack traffic from real threat actors. Collected over 2 million events by automating daily log retrieval, then used Python and Pandas to analyse the data. Findings showed most attacks came from automated bots scanning for weak credentials, with attack patterns varying noticeably by region.',
+    tech: ['Google Cloud', 'Python', 'T-Pot', 'Pandas', 'Linux'],
     icon: 'pi pi-shield',
-    link: 'https://github.com/ApexPlayground/Tpot_analysis_project',
+    github: 'https://github.com/ApexPlayground/Tpot_analysis_project',
+    live: null,
   },
   {
-    title: 'Personal Portfolio',
-    subtitle: 'Modern Developer Portfolio Built with Vue & Tailwind',
-    points: [
-      'Designed and built a responsive, dark-mode friendly portfolio using Vue 3 and Tailwind CSS.',
-      'Implemented floating navigation, fade-up animations, and theme persistence with localStorage.',
-      'Showcases professional projects, technical experience, and contact links.',
-    ],
-    tech: ['Vue.js', 'Tailwind', 'PrimeIcons'],
-    icon: 'pi pi-desktop',
-    link: 'https://github.com/ApexPlayground/Personal_Site',
+    title: 'S3Scan',
+    subtitle: 'AWS S3 security auditing CLI tool',
+    description:
+      'A command-line tool that scans AWS S3 buckets for misconfigurations that commonly lead to data breaches, including exposed access controls, overly permissive policies, missing versioning, and unsafe CORS rules. Built with a modular check system and a full audit mode that runs everything in one command. Supports both live AWS environments and LocalStack for local testing without touching production.',
+    tech: ['Python', 'Boto3', 'Click', 'AWS S3', 'LocalStack'],
+    icon: 'pi pi-cloud',
+    github: 'https://github.com/ApexPlayground/s3_Scan',
+    live: null,
+  },
+]
+
+const webProjects = [
+  {
+    title: "Potter's House Dublin",
+    description: 'Church website built for Potter\'s House Dublin.',
+    screenshot: '/church.png',
+    url: 'https://pottershouse.ie/',
+  },
+  {
+    title: 'First Made Foundation',
+    description: 'Website built for First Made Foundation, a non-profit organisation.',
+    screenshot: '/ngo.png',
+    url: 'https://firstmade-foundation.org/',
   },
 ]
 </script>
 
 <template>
-  <section class="max-w-3xl mx-auto mt-12 sm:px-0 space-y-10">
-    <h2 class="uppercase tracking-wide mb-6 text-center sm:text-left">Projects</h2>
+  <section class="max-w-5xl mx-auto mt-12 px-4 sm:px-0">
 
-    <div class="space-y-12 sm:space-y-16">
-      <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.15">
-        <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
-          <!-- Icon -->
-          <a
-            :href="project.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#222222] transition-colors duration-300 mx-auto sm:mx-0"
-          >
-            <i :class="[project.icon, 'text-lg sm:text-xl']"></i>
-          </a>
+    <!-- Main projects -->
+    <h2 class="uppercase tracking-wide mb-8 text-center sm:text-left">Projects</h2>
 
-          <!-- Content -->
-          <div class="text-center sm:text-left">
-            <!-- Title -->
-            <a
-              :href="project.link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="font-semibold transition-opacity duration-300 hover:opacity-80"
-            >
-              {{ project.title }}
-              <i class="pi pi-external-link ml-1 opacity-60"></i>
-            </a>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.1">
+        <div
+          class="h-full flex flex-col rounded-2xl border border-gray-200 dark:border-[#2a2a2a] bg-white dark:bg-[#111111] p-5 transition-all duration-300 hover:border-gray-300 dark:hover:border-[#3a3a3a] hover:shadow-sm">
 
-            <!-- Subtitle -->
-            <p class="italic opacity-80 mb-3 leading-relaxed mt-1">
-              {{ project.subtitle }}
-            </p>
-
-            <!-- Bullet points -->
-            <ul class="list-disc pl-5 space-y-1 opacity-90 text-left">
-              <li v-for="(point, p) in project.points" :key="p">
-                {{ point }}
-              </li>
-            </ul>
-
-            <!-- Tech tags -->
-            <div class="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
-              <span
-                v-for="(tech, t) in project.tech"
-                :key="t"
-                class="text-xs px-2 py-1 rounded-full bg-gray-200 dark:bg-[#2a2a2a]"
-              >
-                {{ tech }}
-              </span>
+          <!-- Icon + title -->
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 rounded-lg bg-gray-100 dark:bg-[#1e1e1e] flex items-center justify-center shrink-0">
+              <i :class="[project.icon, 'text-sm opacity-60']"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm leading-snug">{{ project.title }}</h3>
+              <p class="text-xs opacity-40 mt-0.5">{{ project.subtitle }}</p>
             </div>
           </div>
+
+          <div class="border-t border-gray-100 dark:border-[#1e1e1e] mb-3"></div>
+
+          <p class="text-xs sm:text-sm opacity-70 leading-relaxed flex-1 mb-4">
+            {{ project.description }}
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span v-for="(tech, t) in project.tech" :key="t"
+              class="text-[11px] px-2 py-0.5 rounded-md bg-gray-100 dark:bg-[#1e1e1e] opacity-80 font-mono">
+              {{ tech }}
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2 mt-auto">
+            <a v-if="project.live" :href="project.live" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium hover:opacity-80 transition-opacity duration-200">
+              <i class="pi pi-external-link text-[10px]"></i>
+              Live
+            </a>
+            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-gray-200 dark:border-[#2a2a2a] hover:border-gray-400 dark:hover:border-[#444] transition-colors duration-200 font-medium">
+              <i class="pi pi-github text-[10px]"></i>
+              GitHub
+            </a>
+          </div>
+
         </div>
       </FadeUpSection>
     </div>
+
+    <!-- Web Projects -->
+    <FadeUpSection :delay="0.15">
+      <div class="mt-14 border-t border-gray-200 dark:border-gray-800 pt-10">
+        <h2 class="uppercase tracking-wide mb-2 text-center sm:text-left">Web Projects</h2>
+        <p class="text-sm opacity-40 mb-8 text-center sm:text-left">Websites built for clients</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div v-for="(site, i) in webProjects" :key="i"
+            class="group flex flex-col rounded-2xl border border-gray-200 dark:border-[#2a2a2a] bg-white dark:bg-[#111111] overflow-hidden transition-all duration-300 hover:border-gray-300 dark:hover:border-[#3a3a3a] hover:shadow-sm">
+            <!-- Screenshot -->
+            <div class="relative overflow-hidden bg-gray-100 dark:bg-[#1a1a1a] aspect-[16/9]">
+              <img :src="site.screenshot" :alt="site.title + ' screenshot'"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Info -->
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-semibold text-sm mb-1">{{ site.title }}</h3>
+              <p class="text-xs opacity-50 leading-relaxed flex-1 mb-4">{{ site.description }}</p>
+
+              <a :href="site.url" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-gray-200 dark:border-[#2a2a2a] hover:border-gray-400 dark:hover:border-[#444] transition-colors duration-200 font-medium w-fit">
+                <i class="pi pi-external-link text-[10px]"></i>
+                Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </FadeUpSection>
+
   </section>
 </template>

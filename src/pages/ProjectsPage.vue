@@ -47,6 +47,12 @@ const webProjects = [
     screenshot: '/ngo.png',
     url: 'https://firstmade-foundation.org/',
   },
+  {
+    title: 'The Kingdom VA',
+    description: 'Website built for The Kingdom VA, an administrative website.',
+    screenshot: '/kva.png',
+    url: 'https://www.thekingdomva.com/',
+  },
 ]
 </script>
 

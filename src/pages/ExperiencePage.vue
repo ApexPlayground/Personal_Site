@@ -10,7 +10,7 @@ const workExperience = [
     points: [
       'Built and launched a stock management system used across 6 hospital departments, hosted on AWS. It tracks 3,000+ medical supplies, sends automatic low-stock alerts, and syncs daily with the hospital\'s finance software (Sage).',
       'Sped up a slow staff onboarding application by 65% by adding a caching layer using Amazon ElastiCache (Redis), reducing unnecessary database calls and improving system performance.',
-      'Developed the backend APIs that connect the hospital\'s internal applications, including appointment systems, HR tools, and clinical records. Built with Java and Spring Boot, deployed on AWS and handling 500+ staff simultaneously.',
+      'Developed the backend APIs that connect the hospital\'s internal applications, including appointment systems, HR tools, and clinical records. Built with Java and Spring Boot, deployed on AWS and handling 500+ staff.',
       'Built a prescription dosage calculator used by pharmacists, replacing a paper-based process. Includes a web interface (React), a serverless backend (AWS Lambda, C#), and automatic logging of every calculation for compliance.',
     ],
     icon: 'pi pi-briefcase',

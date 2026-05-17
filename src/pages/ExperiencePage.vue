@@ -4,14 +4,28 @@ import FadeUpSection from '../components/FadeUpSection.vue'
 const workExperience = [
   {
     title: 'Software Engineer',
+    company: 'Freelance & Contractor',
+    location: 'Dublin, Ireland',
+    period: 'Sep 2024 to Present',
+    points: [
+      'Designed, developed, and deployed three production websites for real-world clients, managing the full project lifecycle from requirements gathering through to deployment.',
+      'Implemented internationalization (i18n) in an Angular application for an early-stage startup, enabling multi-language support across the UI.',
+      'Built <a href="https://pottershouse.ie" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">pottershouse.ie</a>, a church website with Stripe donation functionality via serverless functions, using HTML, CSS, JavaScript, and Python.',
+      'Developed <a href="https://firstmade-foundation.org" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">firstmade-foundation.org</a>, an NGO website built with React, integrating the Google Sheets API for event registration and data collection.',
+      'Built <a href="https://www.thekingdomva.com" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">thekingdomva.com</a>, a full-stack virtual assistant application with a React frontend and FastAPI backend.',
+    ],
+    icon: 'pi pi-briefcase',
+  },
+  {
+    title: 'Software Engineer',
     company: 'Beacon Hospital',
     location: 'Dublin, Ireland',
     period: 'Sep 2023 to Sep 2024',
     points: [
-      'Built and launched a stock management system used across 6 hospital departments, hosted on AWS. It tracks 3,000+ medical supplies, sends automatic low-stock alerts, and syncs daily with the hospital\'s finance software (Sage).',
-      'Sped up a slow staff onboarding application by 65% by adding a caching layer using Amazon ElastiCache (Redis), reducing unnecessary database calls and improving system performance.',
-      'Developed the backend APIs that connect the hospital\'s internal applications, including appointment systems, HR tools, and clinical records. Built with Java and Spring Boot, deployed on AWS and handling 500+ staff.',
-      'Built a prescription dosage calculator used by pharmacists, replacing a paper-based process. Includes a web interface (React), a serverless backend (AWS Lambda, C#), and automatic logging of every calculation for compliance.',
+      'Launched a stock management system across 6 departments on AWS ECS, tracking 3,000+ medical supplies with automated logging and low-stock alert tickets.',
+      'Built a prescription dosage calculator with a React frontend and serverless AWS Lambda backend, replacing a manual paper-based process.',
+      'Improved staff onboarding application response times by 65% by introducing a Redis caching layer, reducing redundant database calls.',
+      'Developed and maintained backend APIs connecting hospital systems including appointments, HR, and clinical records using Java and Spring Boot on AWS ECS, serving 500+ staff daily.',
     ],
     icon: 'pi pi-briefcase',
   },
@@ -21,10 +35,10 @@ const workExperience = [
     location: 'Dublin, Ireland',
     period: 'May 2023 to Aug 2023',
     points: [
-      'Built an online appointment booking system used by hospital patients across 3 departments, hosted on AWS Elastic Beanstalk. Reduced time spent on manual scheduling by 30% within the first month.',
-      'Created a digital medication request system letting nurses send drug orders directly to the pharmacy through a web application.',
-      'Moved 5 internal hospital applications from old on-site servers to AWS (EC2 and RDS), improving system uptime from 94% to 99.5% and adding automated CloudWatch alerts when anything goes wrong.',
-      'Worked in an Agile team, with daily standups, two-week sprints, and collaborative code reviews with senior engineers.',
+      'Built an online appointment booking system across 3 departments, reducing manual scheduling by 30% within the first month.',
+      'Developed a digital medication request system that allows nurses to submit drug orders directly to the pharmacy via a web application.',
+      'Migrated 5 internal applications from on-premise servers to AWS (EC2 and RDS), improving uptime significantly with automated CloudWatch alerting.',
+      'Worked in an Agile team with daily standups, two-week sprints, and collaborative code reviews, consistently delivering well-documented and tested code.',
     ],
     icon: 'pi pi-briefcase',
   },
@@ -79,7 +93,7 @@ const education = [
               <li v-for="(point, p) in job.points" :key="p"
                 class="flex items-start gap-2 text-sm opacity-70 leading-relaxed">
                 <span class="mt-2 w-1 h-1 rounded-full bg-current shrink-0 opacity-40"></span>
-                {{ point }}
+                <span v-html="point"></span>
               </li>
             </ul>
           </div>

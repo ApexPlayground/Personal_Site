@@ -4,9 +4,9 @@
     <FadeUpSection :delay="0">
       <div class="text-base leading-relaxed text-gray-800 dark:text-gray-300 space-y-5">
         <p>
-          Software Engineer with over a year of experience building and deploying cloud-based
-          applications in a live healthcare environment. Skilled in backend development, AWS cloud
-          infrastructure, and designing systems that are fast, secure, and reliable.
+          Software Engineer with over 2 years of experience building and deploying cloud-based applications. Skilled in
+          backend development across Java, Go, and Python,
+          with production experience on AWS and GCP Infrastructure.
         </p>
 
         <p>
@@ -15,10 +15,6 @@
           building software that is clear, structured, and maintainable.
         </p>
 
-        <p>
-          Outside of work, I enjoy running, exploring system design, and experimenting with small
-          projects that test how things are built and secured.
-        </p>
       </div>
 
       <!-- socials -->
@@ -53,7 +49,7 @@
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Languages</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">Go, Python, Java, JavaScript, C#, SQL</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">Python, Go, Java, JavaScript, C#, SQL</p>
             </div>
           </div>
 
@@ -65,20 +61,7 @@
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Frameworks</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">Spring Boot, ASP.NET, FastAPI, React, Vue.js</p>
-            </div>
-          </div>
-
-          <!-- AWS -->
-          <div class="flex items-start gap-4">
-            <div
-              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300 shrink-0">
-              <i class="pi pi-cloud text-xl"></i>
-            </div>
-            <div>
-              <h3 class="font-medium text-gray-900 dark:text-white mb-1">AWS</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">EC2, Lambda, S3, ElastiCache, API Gateway, CloudWatch,
-                IAM, ECS</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">Spring Boot, FastAPI, Gin, ASP.NET, React, Vue.js</p>
             </div>
           </div>
 
@@ -90,7 +73,8 @@
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Tools</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">GCP, Docker, Linux, Git, Bash, PostgreSQL, Redis</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">AWS,GCP, Docker, Linux, Git, Bash, PostgreSQL, Redis
+              </p>
             </div>
           </div>
         </div>

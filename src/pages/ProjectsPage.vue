@@ -60,7 +60,8 @@ const webProjects = [
   <section class="max-w-5xl mx-auto mt-12 px-4 sm:px-0">
 
     <!-- Main projects -->
-    <h2 class="uppercase tracking-wide mb-8 text-center sm:text-left">Projects</h2>
+    <h2 class="text-sm uppercase tracking-wide text-gray-800 dark:text-gray-400 mb-8 text-center sm:text-left">Projects
+    </h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       <FadeUpSection v-for="(project, i) in projects" :key="i" :delay="i * 0.1">
@@ -73,14 +74,14 @@ const webProjects = [
               <i :class="[project.icon, 'text-sm opacity-60']"></i>
             </div>
             <div>
-              <h3 class="font-semibold text-sm leading-snug">{{ project.title }}</h3>
-              <p class="text-xs opacity-40 mt-0.5">{{ project.subtitle }}</p>
+              <h3 class="font-medium text-gray-900 dark:text-white leading-snug">{{ project.title }}</h3>
+              <p class="text-sm text-gray-800 dark:text-gray-400 mt-0.5">{{ project.subtitle }}</p>
             </div>
           </div>
 
           <div class="border-t border-gray-100 dark:border-[#1e1e1e] mb-3"></div>
 
-          <p class="text-xs sm:text-sm opacity-70 leading-relaxed flex-1 mb-4">
+          <p class="text-sm text-gray-800 dark:text-gray-400 leading-relaxed flex-1 mb-4">
             {{ project.description }}
           </p>
 
@@ -111,8 +112,9 @@ const webProjects = [
     <!-- Web Projects -->
     <FadeUpSection :delay="0.15">
       <div class="mt-14 border-t border-gray-200 dark:border-gray-800 pt-10">
-        <h2 class="uppercase tracking-wide mb-2 text-center sm:text-left">Web Projects</h2>
-        <p class="text-sm opacity-40 mb-8 text-center sm:text-left">Websites built for clients</p>
+        <h2 class="text-sm uppercase tracking-wide text-gray-800 dark:text-gray-400 mb-2 text-center sm:text-left">Web
+          Projects</h2>
+        <p class="text-sm text-gray-800 dark:text-gray-400 mb-8 text-center sm:text-left">Websites built for clients</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div v-for="(site, i) in webProjects" :key="i"
@@ -125,8 +127,8 @@ const webProjects = [
 
             <!-- Info -->
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-semibold text-sm mb-1">{{ site.title }}</h3>
-              <p class="text-xs opacity-50 leading-relaxed flex-1 mb-4">{{ site.description }}</p>
+              <h3 class="font-medium text-gray-900 dark:text-white text-sm mb-1">{{ site.title }}</h3>
+              <p class="text-sm text-gray-800 dark:text-gray-400 leading-relaxed flex-1 mb-4">{{ site.description }}</p>
 
               <a :href="site.url" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-gray-200 dark:border-[#2a2a2a] hover:border-gray-400 dark:hover:border-[#444] transition-colors duration-200 font-medium w-fit">

@@ -2,43 +2,42 @@
 import FadeUpSection from '../components/FadeUpSection.vue'
 
 const workExperience = [
-  {
-    title: 'Software Engineer',
-    company: 'Freelance & Contractor',
-    location: 'Dublin, Ireland',
-    period: 'Sep 2024 to Present',
-    points: [
-      'Designed, developed, and deployed three production websites for real-world clients, managing the full project lifecycle from requirements gathering through to deployment.',
-      'Implemented internationalization (i18n) in an Angular application for an early-stage startup, enabling multi-language support across the UI.',
-      'Built <a href="https://pottershouse.ie" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">pottershouse.ie</a>, a church website with Stripe donation functionality via serverless functions, using HTML, CSS, JavaScript, and Python.',
-      'Developed <a href="https://firstmade-foundation.org" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">firstmade-foundation.org</a>, an NGO website built with React, integrating the Google Sheets API for event registration and data collection.',
-      'Built <a href="https://www.thekingdomva.com" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">thekingdomva.com</a>, a full-stack virtual assistant application with a React frontend and FastAPI backend.',
-    ],
-    icon: 'pi pi-briefcase',
-  },
+
   {
     title: 'Software Engineer',
     company: 'Beacon Hospital',
-    location: 'Dublin, Ireland',
-    period: 'Sep 2023 to Sep 2024',
+    period: 'September 2023 – September 2024',
     points: [
-      'Launched a stock management system across 6 departments on AWS ECS, tracking 3,000+ medical supplies with automated logging and low-stock alert tickets.',
-      'Built a prescription dosage calculator with a React frontend and serverless AWS Lambda backend, replacing a manual paper-based process.',
-      'Improved staff onboarding application response times by 65% by introducing a Redis caching layer, reducing redundant database calls.',
-      'Developed and maintained backend APIs connecting hospital systems including appointments, HR, and clinical records using Java and Spring Boot on AWS ECS, serving 500+ staff daily.',
+      'Designed, built, and maintained backend APIs for internal systems including records management and HR, serving 500+ staff daily across a live production environment as part of a small engineering team.',
+      'Built a Python tool that parsed structured Excel templates to automate medical formula dosage calculations, replacing a manual, error-prone workflow.',
+      'Improved response times by over 90% on a staff-facing service, reducing a 10s cross-department join to under 1s by introducing a Redis caching layer with write-through invalidation to eliminate redundant database queries.',
+      'Developed and launched an inventory management system across 6 departments, tracking 3,000+ items with automated low-stock alerting and daily sync to finance software.',
+      'Implemented a full audit trail for all inventory changes in a dedicated database table, capturing the user, action type (create, update, delete), and previous and new values for every change.',
+      'Wrote and maintained GitHub Actions CI pipelines running unit and integration tests across all internal services on every pull request.',
     ],
     icon: 'pi pi-briefcase',
   },
   {
     title: 'Software Engineer Intern',
     company: 'Beacon Hospital',
-    location: 'Dublin, Ireland',
-    period: 'May 2023 to Aug 2023',
+    period: 'May 2023 – August 2023',
     points: [
-      'Built an online appointment booking system across 3 departments, reducing manual scheduling by 30% within the first month.',
-      'Developed a digital medication request system that allows nurses to submit drug orders directly to the pharmacy via a web application.',
-      'Migrated 5 internal applications from on-premise servers to AWS (EC2 and RDS), improving uptime significantly with automated CloudWatch alerting.',
-      'Worked in an Agile team with daily standups, two-week sprints, and collaborative code reviews, consistently delivering well-documented and tested code.',
+      'Built a digital supply request system allowing nurses to submit drug orders directly to the pharmacy via a web application; fully shipped and used daily.',
+      'Identified and resolved recurring bugs across existing internal systems, reducing support requests and improving day-to-day reliability for end users.',
+      'Worked in an Agile team with two-week sprints, daily standups, and collaborative code reviews, consistently delivering well-tested and documented code.',
+    ],
+    icon: 'pi pi-briefcase',
+  },
+
+  {
+    title: 'Software Developer',
+    company: 'Freelance',
+    location: 'Dublin, Ireland',
+    period: 'September 2024 – Present',
+    points: [
+      'Built <a href="https://thekingdomva.com" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">thekingdomva.com</a> (virtual assistant agency): full-stack application with a Vue.js frontend and FastAPI backend, implementing JWT-based authentication and a structured REST API; live in production.',
+      'Designed and deployed a serverless payment integration for <a href="https://pottershouse.ie" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">pottershouse.ie</a> (religious organisation, 150 members) with full transaction logging, handling live payments end-to-end.',
+      'Integrated the Google Sheets API into <a href="https://firstmade-foundation.org" target="_blank" rel="noopener noreferrer" class="underline opacity-90 hover:opacity-100">firstmade-foundation.org</a> (non-profit) to manage event registrations for 3 annual events, replacing a manual data entry process.',
     ],
     icon: 'pi pi-briefcase',
   },

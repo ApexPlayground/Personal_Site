@@ -39,8 +39,8 @@
         <h2 class="text-sm uppercase tracking-wide text-gray-800 dark:text-gray-400 mb-6">
           Skills & Tools
         </h2>
-
         <div class="space-y-6">
+
           <!-- Languages -->
           <div class="flex items-start gap-4">
             <div
@@ -49,7 +49,7 @@
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Languages</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">Python, Go, Java, JavaScript, C#, SQL</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">Python, Go, SQL</p>
             </div>
           </div>
 
@@ -61,7 +61,7 @@
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Frameworks</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">Spring Boot, FastAPI, Gin, ASP.NET, React, Vue.js</p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">FastAPI, Gin</p>
             </div>
           </div>
 
@@ -73,10 +73,25 @@
             </div>
             <div>
               <h3 class="font-medium text-gray-900 dark:text-white mb-1">Tools</h3>
-              <p class="text-sm text-gray-800 dark:text-gray-400">AWS,GCP, Docker, Linux, Git, Bash, PostgreSQL, Redis
-              </p>
+              <p class="text-sm text-gray-800 dark:text-gray-400">Docker, PostgreSQL, Redis, RabbitMQ, GCP, GitHub
+                Actions, Linux, Git, Bash, Vue.js</p>
             </div>
           </div>
+
+          <!-- Practices -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center text-gray-800 dark:text-gray-300 shrink-0">
+              <i class="pi pi-list-check text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-medium text-gray-900 dark:text-white mb-1">Practices</h3>
+              <p class="text-sm text-gray-800 dark:text-gray-400">REST API design, Microservices architecture,
+                Event-driven & async systems, Secure API design, Authentication & authorisation, CI/CD pipelines, Unit &
+                integration testing, Agile/Scrum</p>
+            </div>
+          </div>
+
         </div>
       </section>
     </FadeUpSection>

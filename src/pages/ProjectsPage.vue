@@ -3,6 +3,16 @@ import FadeUpSection from '../components/FadeUpSection.vue'
 
 const projects = [
   {
+    title: 'Stripe Webhook Processing System',
+    subtitle: 'Distributed async event processing service',
+    description:
+      'Built a distributed event processing service that authenticates incoming Stripe webhook events using signature verification and applies idempotency checks against PostgreSQL to prevent duplicate processing. Designed an async ingestion pipeline with RabbitMQ, fully decoupling the API from downstream processing. Containerised all services with Docker Compose using health checks, and wrote a GitHub Actions CI pipeline with unit and integration tests across the API, worker, and database layers.',
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Docker', 'GitHub Actions'],
+    icon: 'pi pi-bolt',
+    github: 'https://github.com/ApexPlayground',
+    live: null,
+  },
+  {
     title: 'URL Shortener & QR Analytics',
     subtitle: 'Full-stack link management platform',
     description:
